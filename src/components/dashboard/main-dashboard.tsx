@@ -4,6 +4,7 @@ import MetricsGrid from './metrics-grid';
 import PriceChart from './price-chart';
 import SentimentAnalyzer from './sentiment-analyzer';
 import { Separator } from '@/components/ui/separator';
+import FileUpload from './file-upload';
 
 interface MainDashboardProps {
   company: Company;
@@ -19,6 +20,8 @@ export default function MainDashboard({ company, metrics }: MainDashboardProps) 
         <PriceChart chartData={metrics.chartData} companyName={company.name} />
         <Separator />
         <SentimentAnalyzer news={company.news} ticker={company.ticker} />
+        <Separator />
+        <FileUpload />
       </div>
     </div>
   );
