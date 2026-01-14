@@ -3,193 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <title>Stock Market Data Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0d6efd;
+        }
+        code {
+            background: #e9ecef;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #212529;
+            color: #f8f9fa;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 6px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>📈 Stock Market Data Platform</h1>
+<div class="container">
 
-<p>
-<strong>Stock Market Data Platform</strong> is a backend-focused web application designed
-to collect, clean, analyze, and expose stock market data through REST APIs.
-The project demonstrates practical skills in Python, data processing,
-API development, and basic analytics for real-world financial data.
-</p>
+    <h1>📈 Stock Market Data Platform</h1>
+    <p>
+        A modern web application built using <strong>Next.js</strong>, <strong>React</strong>, and
+        <strong>Firebase</strong> that provides a structured platform to explore stock market data.
+        This project demonstrates frontend architecture, configuration management, and scalable
+        deployment readiness.
+    </p>
 
-<hr>
+    <hr>
 
-<h2>🎯 Project Objective</h2>
-<p>
-The objective of this project is to build a <strong>mini stock analytics system</strong>
-that fetches stock data from public sources or CSV files, processes it,
-and provides meaningful insights such as returns, moving averages,
-and yearly highs/lows through clean API endpoints.
-</p>
+    <h2>🧠 Key Features</h2>
+    <ul>
+        <li>Modern frontend built using Next.js (React framework)</li>
+        <li>Responsive UI using Tailwind CSS</li>
+        <li>Firebase hosting support</li>
+        <li>TypeScript for type safety</li>
+        <li>Clean and scalable project structure</li>
+        <li>Ready for API integration and data visualization</li>
+    </ul>
 
-<hr>
+    <h2>🚀 Tech Stack</h2>
+    <ul>
+        <li><strong>Next.js</strong> – React framework for server-side rendering</li>
+        <li><strong>React</strong> – UI development</li>
+        <li><strong>TypeScript</strong> – Type safety and maintainability</li>
+        <li><strong>Tailwind CSS</strong> – Utility-first CSS framework</li>
+        <li><strong>PostCSS</strong> – CSS processing</li>
+        <li><strong>Firebase</strong> – Hosting and backend services</li>
+    </ul>
 
-<h2>📌 Key Features</h2>
-<ul>
-    <li>Stock data ingestion from CSV or public APIs</li>
-    <li>Data cleaning and preprocessing</li>
-    <li>Date format normalization</li>
-    <li>Daily return calculation</li>
-    <li>7-day moving average calculation</li>
-    <li>52-week high and low detection</li>
-    <li>Creative metric such as volatility</li>
-    <li>REST APIs with automatic documentation (Swagger)</li>
-</ul>
-
-<hr>
-
-<h2>🧠 Data Metrics Calculated</h2>
-<ul>
-    <li><strong>Daily Returns</strong> – Percentage change between consecutive days</li>
-    <li><strong>7-Day Moving Average</strong> – Short-term trend analysis</li>
-    <li><strong>52-Week High</strong> – Highest price in the past year</li>
-    <li><strong>52-Week Low</strong> – Lowest price in the past year</li>
-    <li><strong>Volatility</strong> – Measure of price fluctuation</li>
-</ul>
-
-<hr>
-
-<h2>🛠️ Technologies Used</h2>
-<ul>
-    <li>Python</li>
-    <li>FastAPI (REST API development)</li>
-    <li>Pandas (Data analysis & cleaning)</li>
-    <li>NumPy (Numerical computations)</li>
-    <li>Uvicorn (ASGI server)</li>
-    <li>Swagger / OpenAPI (API documentation)</li>
-</ul>
-
-<hr>
-
-<h2>🏗️ System Architecture</h2>
-<pre>
-Stock Data Source (CSV / API)
-        ↓
-Data Cleaning & Processing (Pandas)
-        ↓
-Metric Calculation Engine
-        ↓
-FastAPI Backend
-        ↓
-REST API Endpoints
-        ↓
-Client / Dashboard / Postman
-</pre>
-
-<hr>
-
-<h2>📂 Project Structure</h2>
-<pre>
-stock-market-data-platform/
-│── data/
-│   │── stocks.csv
+    <h2>📁 Project Structure</h2>
+    <pre>
+Stock-market-data-platform/
 │
-│── app/
-│   │── main.py
-│   │── data_loader.py
-│   │── analytics.py
-│   │── schemas.py
+├── docs/                     # Documentation files
+├── src/
+│   └── app/
+│       └── page.tsx          # Main application page
+├── public/                   # Static assets
 │
-│── requirements.txt
-│── README.html
-</pre>
+├── apphosting.yaml            # Firebase hosting configuration
+├── next.config.ts             # Next.js configuration
+├── tailwind.config.ts         # Tailwind CSS configuration
+├── postcss.config.mjs         # PostCSS configuration
+├── tsconfig.json              # TypeScript configuration
+├── package.json               # Project dependencies
+└── .gitignore
+    </pre>
 
-<hr>
-
-<h2>⚙️ Setup Instructions</h2>
-
-<ol>
-    <li><strong>Clone the repository</strong></li>
-</ol>
-<pre>
+    <h2>🛠️ Installation</h2>
+    <ol>
+        <li>Clone the repository</li>
+    </ol>
+    <pre>
 git clone https://github.com/sohampowar/Stock-market-data-platform.git
-</pre>
-
-<ol start="2">
-    <li><strong>Navigate to the project directory</strong></li>
-</ol>
-<pre>
 cd Stock-market-data-platform
-</pre>
+    </pre>
 
-<ol start="3">
-    <li><strong>Create and activate virtual environment</strong></li>
-</ol>
-<pre>
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-</pre>
+    <ol start="2">
+        <li>Install dependencies</li>
+    </ol>
+    <pre>
+npm install
+    </pre>
 
-<ol start="4">
-    <li><strong>Install required dependencies</strong></li>
-</ol>
-<pre>
-pip install -r requirements.txt
-</pre>
+    <h2>💻 Run the Project Locally</h2>
+    <pre>
+npm run dev
+    </pre>
+    <p>
+        Open your browser and navigate to:
+        <code>http://localhost:3000</code>
+    </p>
 
-<ol start="5">
-    <li><strong>Start the FastAPI server</strong></li>
-</ol>
-<pre>
-uvicorn app.main:app --reload
-</pre>
+    <h2>🧪 Production Build</h2>
+    <pre>
+npm run build
+npm run start
+    </pre>
 
-<ol start="6">
-    <li><strong>Open API documentation</strong></li>
-</ol>
-<pre>
-Swagger UI : http://127.0.0.1:8000/docs
-ReDoc UI   : http://127.0.0.1:8000/redoc
-</pre>
+    <h2>🚀 Deployment (Firebase)</h2>
+    <ol>
+        <li>Install Firebase CLI</li>
+    </ol>
+    <pre>
+npm install -g firebase-tools
+    </pre>
 
-<hr>
+    <ol start="2">
+        <li>Login to Firebase</li>
+    </ol>
+    <pre>
+firebase login
+    </pre>
 
-<h2>📊 Output</h2>
-<ul>
-    <li>JSON-based API responses</li>
-    <li>Cleaned and processed stock datasets</li>
-    <li>Computed analytics metrics</li>
-    <li>Interactive Swagger documentation</li>
-</ul>
+    <ol start="3">
+        <li>Deploy the project</li>
+    </ol>
+    <pre>
+firebase deploy
+    </pre>
 
-<hr>
+    <h2>📝 Future Enhancements</h2>
+    <ul>
+        <li>Integrate live stock APIs (Yahoo Finance, Alpha Vantage)</li>
+        <li>Charts and analytics using Chart.js or Recharts</li>
+        <li>User authentication and watchlists</li>
+        <li>Backend APIs for caching and data processing</li>
+        <li>Dark mode UI</li>
+    </ul>
 
-<h2>🎥 Project Demonstration</h2>
-<p>
-A short demo video can showcase:
-</p>
-<ul>
-    <li>API execution through Swagger UI</li>
-    <li>Stock data retrieval</li>
-    <li>Analytics endpoint responses</li>
-</ul>
+    <h2>🧡 Contribution</h2>
+    <p>
+        Contributions are welcome. Fork the repository, create a feature branch,
+        commit your changes, and open a pull request.
+    </p>
 
-<hr>
+    <h2>📄 License</h2>
+    <p>
+        This project is currently unlicensed. You may add an MIT or Apache License
+        if open-source usage is intended.
+    </p>
 
-<h2>⚠️ Disclaimer</h2>
-<p>
-This project is built for <strong>learning and evaluation purposes</strong>.
-The stock data used may be historical or sample-based and should not be
-used for real financial trading decisions.
-</p>
+</div>
 
-<hr>
-
-<h2>👨‍💻 Author</h2>
-<p>
-<strong>Soham Powar</strong><br>
-Python Developer | Backend & Data Enthusiast
-</p>
-
-<hr>
-
-<h2>📜 License</h2>
-<p>
-This project is licensed under the <strong>MIT License</strong>.
-</p>
+<footer>
+    <p>Developed by Soham Powar | Stock Market Data Platform</p>
+</footer>
 
 </body>
 </html>
